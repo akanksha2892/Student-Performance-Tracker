@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page |Feel Like Home </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">TrackSelf</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <!-- <a href="../html/index.html">Home</a> -->
+          <a href="../html/index.html">Home</a>
+            <a href="../riya/causes.html">Homelessness Problem</a>
+            <a href="../jansy/jansy.php">Solutions</a>
+            
+            <a href="../riya/donation.php">Help Us</a>
+            <a href="../akanksha/volunteer.html">Volunteer</a>
+            <a href="../riya/pie1.php">Resources</a>
+          
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="12.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="8.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="10.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="9.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="11.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Roof <br><span>on Head?</span></h1>
+        <p>Homelessness is a complex social issue that affects millions of 
+          people worldwide. One of the most pressing needs for individuals experiencing homelessness is access to safe and secure housing.
+           Without a roof over their head, individuals experiencing homelessness are vulnerable to a range of health and safety risks, 
+           including exposure to the elements, violence, and illness. Housing is a fundamental human right, 
+          and providing adequate housing solutions to individuals experiencing homelessness is essential to addressing this issue. 
+               </p>
+        <a href="../riya/policy.html">Get Help</a>
+      </div>
+      <div class="content">
+        <h1>Shelter Home &<br><span> other Solutions</span></h1>
+        <p>Shared housing homelessness occurs when individuals or families are 
+          forced to live with others due to the inability to afford their own housing. 
+        </p>
+         <a href="../jansy/index.html">Solution</a>
+      </div>
+      <div class="content">
+        <h1>Donations<br><span></span></h1>
+        <p>Donations refer to the act of giving money or other resources to a person or organization in need, 
+          without expecting anything in return. Donations can be made for various reasons, such as to support a cause,
+           help those affected by a disaster, or contribute to a charitable organization. They can be made in various forms, 
+           including cash, check, credit card, or online transfer. </p>
+            <a href="../riya/info.php">Donate</a>
+      </div>
+      <div class="content">
+        <h1>Volunteer<br><span></span></h1>
+        <p> Volunteering is the act of offering one's time, skills, or services to a person or organization without 
+          expecting payment or compensation. Volunteers may help with a wide range of activities, such as serving meals at a shelter, 
+          assisting with community events,
+           or providing support to those in need. Volunteering can be a rewarding experience that provides personal 
+           fulfillment and a sense of purpose.</p>
+             <a href="../akanksha/volunteer.html">Volunteer</a>
+      </div>
+      <div class="content">
+        <h1>Statistics<br><span> </span></h1>
+        <p>Statistics showing the number of homeless population in various states of India </p>
+             <a href="../css/search.html">View</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
+      
